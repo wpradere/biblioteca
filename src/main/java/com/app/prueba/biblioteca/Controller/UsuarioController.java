@@ -1,6 +1,6 @@
 package com.app.prueba.biblioteca.Controller;
 
-import com.app.prueba.biblioteca.entity.Libro;
+import com.app.prueba.biblioteca.model.entity.Libro;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

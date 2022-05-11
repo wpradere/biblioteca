@@ -1,8 +1,7 @@
-package com.app.prueba.biblioteca.entity;
+package com.app.prueba.biblioteca.model.entity;
 
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "libros")
@@ -12,28 +11,29 @@ public class Libro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idLibro;
 
-    @Column(name = "isnb",unique = true)
-    private String isnb;
+    @Column(name = "isbn", unique = true)
+    private String isbn;
 
     @Column(name = "nombre_libro")
     private String nombreLibro;
 
     @Column(name = "estado_libro")
-    private boolean estadoLibro=false;
+    private boolean estadoLibro = false;
 
     public Long getIdLibro() {
         return idLibro;
     }
+
     public void setIdLibro(Long idLibro) {
         this.idLibro = idLibro;
     }
 
-    public String getIsnb() {
-        return isnb;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setIsnb(String isnb) {
-        this.isnb = isnb;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public String getNombreLibro() {

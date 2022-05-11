@@ -1,8 +1,6 @@
-package com.app.prueba.biblioteca.entity;
+package com.app.prueba.biblioteca.model.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "usuarios")
@@ -15,21 +13,11 @@ public class Usuario {
     @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "identificacion_usuario",unique = true)
+    @Column(name = "identificacion_usuario", unique = true)
     private String identificacionUsuario;
 
-    @Column(name = "tipo_usuario")
-    private int tipoUsuario;
-
     @Column(name = "estado_usuario")
-    private boolean estadoUsuario=false;
-
-
-        public  Usuario(){
-
-        }
-
-
+    private boolean estadoUsuario = false;
 
     public Long getIdUsuario() {
         return idUsuario;
@@ -54,13 +42,4 @@ public class Usuario {
     public void setIdentificacionUsuario(String identificacionUsuario) {
         this.identificacionUsuario = identificacionUsuario;
     }
-
-    public int getTipoUsuario() {
-        return tipoUsuario;
-    }
-
-    public void setTipoUsuario(int tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
-    }
-
 }

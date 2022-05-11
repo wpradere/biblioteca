@@ -1,6 +1,6 @@
 package com.app.prueba.biblioteca.service.impl;
 
-import com.app.prueba.biblioteca.entity.Libro;
+import com.app.prueba.biblioteca.model.entity.Libro;
 import com.app.prueba.biblioteca.repository.LibroRepository;
 import com.app.prueba.biblioteca.service.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,5 +18,10 @@ public class LibroServiceImpl implements LibroService {
     @Override
     public List<Libro> findOne(Long id) {
         return libroRepository.findByIdLibro(id);
+    }
+
+    @Override
+    public Libro findOneLibro(String isbn) {
+        return libroRepository.findByIsbn(isbn);
     }
 }

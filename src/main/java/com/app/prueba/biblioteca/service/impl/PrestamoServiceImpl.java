@@ -1,6 +1,6 @@
 package com.app.prueba.biblioteca.service.impl;
 
-import com.app.prueba.biblioteca.entity.Prestamo;
+import com.app.prueba.biblioteca.model.entity.Prestamo;
 import com.app.prueba.biblioteca.repository.PrestamoRepository;
 import com.app.prueba.biblioteca.service.PrestamoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +14,14 @@ public class PrestamoServiceImpl implements PrestamoService {
     private PrestamoRepository prestamoRepository;
 
     @Override
-    public List<Prestamo> find() {
-        return prestamoRepository.findAll();
+    public Prestamo findOne(String isbn) {
+        return prestamoRepository.findByIsbn(isbn);
     }
 
     @Override
-    public Prestamo findOne(String isnb) {
-        return prestamoRepository.findByIsnb(isnb);
+    public Prestamo save(Prestamo prestamo) {
+        return prestamoRepository.save(prestamo);
     }
+
 
 }

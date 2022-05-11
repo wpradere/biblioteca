@@ -1,11 +1,13 @@
 package com.app.prueba.biblioteca.service;
 
-import com.app.prueba.biblioteca.entity.Prestamo;
+import com.app.prueba.biblioteca.model.entity.Prestamo;
 
 import java.util.List;
 
 public interface PrestamoService {
 
-    public List<Prestamo> find();
-    public Prestamo findOne(String isnb);
+
+    public Prestamo findOne(String isbn);
+    public Prestamo save (Prestamo prestamo);
+
 }
